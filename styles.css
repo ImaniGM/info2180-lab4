@@ -1,1 +1,24 @@
-/*styles
+body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Ans",sans-serif;
+    font-size: 18px;
+    max-width: 1500px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    background-color: bisque;
+}
+
+
+header{
+    display: flex;
+    width: 1500px;
+    height: 100px;
+    background-color:aquamarine;
+    font-size: 50px;  
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+h2{
+    text-align: center;
+}

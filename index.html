@@ -2,23 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" media="screen"/>
+    
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Lab 4</title>
-    
+    <script src="https://code.jquery.com.jquery-3.3.1.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
       <main>
-          <h1>Avengers Character Search</h1>
-         
-        <div id="result" > </div>  
-          </div>
-          <form action="superheroes.php" method="get"></form>
-          <div id="buTTon">
-              <button type="button" onclick="clicker()">Search</button>
-          </div>
+          <header>Avengers Character Search</header>
+          <h1>Search by Full Name or Alias </h1>
+          <form action="superheroes.php" id="txt" method="GET">
+              <input id="txtBox" type="text" name="search" placeholder="eg.Captain America or Steve Rogers" />
+              <input id="button" type="button" value="Search" />
+         </form>
+          <div id="result" > 
+              <h2>Result</h2>
+          </div>  
+
+          
+
+          
+          
        </main>
 </body>
 </html>

@@ -1,26 +1,35 @@
+
 "use strict";
 
+document.addEventListener('DOMContentLoaded', function(){
 
-    
-      function clicker() {
-      
-     
+    var btn= document.getElementById("button");
+    var txtInput = document.getElementById("txtBox").value;
+
+    btn.addEventListener('click', (e) =>{
+
+      e.preventDefault();
       const xhttpR= new XMLHttpRequest();
       xhttpR.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          var ale= document.innerHTML = this.response;
-          alert(this.response);
-        }
-      };
-         
-          xhttpR.open ('GET', 'superheroes.php', true);
-         
-          xhttpR.send ();
+          if (xhttpR.readyState==XMLHttpRequest.DONE && xhttpR.status == 200) {
+            var ale= xhttpR.response;
+            txtInput;
 
+            document.getElementById("result").innerHTML= ale;
+            
+          }
+          if (xhttpR.readyState==XMLHttpRequest.DONE && xhttpR.status == 404) {
+              alert('File not found');
     }
-  
-
-
+}
+       
+        xhttpR.open ('GET', "superheroes.php?q="+txtInput, true);
+        xhttpR.send ();
+    
+});
+});
+    
+    
   
 
 
